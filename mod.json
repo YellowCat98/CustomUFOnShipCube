@@ -14,7 +14,7 @@
 	"settings": {
 		"ship-cube": {
 			"name": "Ship Cube ID",
-			"description": "The cube for the ship.",
+			"description": "The cube ID for the ship.",
 			"type": "int",
 			"default": 0,
 			"max": 484,
@@ -22,7 +22,7 @@
 		},
 		"ufo-cube": {
 			"name": "UFO Cube ID",
-			"description": "The cube for the UFO.",
+			"description": "The cube ID for the UFO.",
 			"type": "int",
 			"default": 0,
 			"max": 484,
