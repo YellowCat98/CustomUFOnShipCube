@@ -8,7 +8,7 @@
 	},
 	"id": "yellowcat98.custom_ufo_n_ship_cube",
 	"name": "Custom UFO & ship Cube",
-	"version": "v1.0.0",
+	"version": "v1.1.0",
 	"developer": "YellowCat98",
 	"description": "This mod allows you to customize the cube of your UFO, this allows any cube to be selected, even ones that aren't unlocked.",
 	"settings": {
@@ -18,7 +18,10 @@
 			"type": "int",
 			"default": 0,
 			"max": 484,
-			"min": 0
+			"min": 0,
+			"control": {
+				"slider": false
+			}
 		},
 		"ufo-cube": {
 			"name": "UFO Cube ID",
@@ -26,7 +29,10 @@
 			"type": "int",
 			"default": 0,
 			"max": 484,
-			"min": 0
+			"min": 0,
+			"control": {
+				"slider": false
+			}
 		}
 	},
 	"links": {

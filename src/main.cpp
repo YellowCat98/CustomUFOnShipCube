@@ -3,15 +3,19 @@
 
 using namespace geode::prelude;
 
-class $modify(GJBaseGameLayer) {
-	void playerWillSwitchMode(PlayerObject* p0, GameObject* p1) {
-		GJBaseGameLayer::playerWillSwitchMode(p0, p1);
-			if (p1->m_objectType == GameObjectType::ShipPortal) {
-				p0->updatePlayerFrame(Mod::get()->getSettingValue<int64_t>("ship-cube"));
-			} else if (p1->m_objectType == GameObjectType::UfoPortal) {
-				p0->updatePlayerFrame(Mod::get()->getSettingValue<int64_t>("ufo-cube"));
-			} else {
-				p0->updatePlayerFrame(GameManager::get()->m_playerFrame.value());
-			}
+bool isCube(PlayerObject* player) {
+	return !player->m_isShip && !player->m_isBall && !player->m_isBird && !player->m_isDart && !player->m_isRobot && !player->m_isSpider && !player->m_isSwing;
+}
+
+class $modify(GJBaseGameLayerHook, GJBaseGameLayer) {
+	void visit() {
+		GJBaseGameLayer::visit();
+		if (m_player1->m_isBird) {
+			m_player1->updatePlayerFrame(Mod::get()->getSettingValue<int64_t>("ufo-cube"));
+		} else if (m_player1->m_isShip) {
+			m_player1->updatePlayerFrame(Mod::get()->getSettingValue<int64_t>("ship-cube"));
+		} else if (isCube(m_player1)) {
+			m_player1->updatePlayerFrame(GameManager::get()->m_playerFrame.value());
+		}
 	}
 };
