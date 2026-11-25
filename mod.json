@@ -1,14 +1,14 @@
 {
-	"geode": "5.0.0-beta.3",
+	"geode": "6.0.0",
 	"gd": {
-		"win": "2.2081",
-		"android": "2.2081",
-		"mac": "2.2081",
-		"ios": "2.2081"
+		"win": "2.2091",
+		"android": "2.2091",
+		"mac": "2.2091",
+		"ios": "2.2091"
 	},
 	"id": "yellowcat98.custom_ufo_n_ship_cube",
 	"name": "Custom UFO & ship Cube",
-	"version": "v1.1.2",
+	"version": "v1.1.3",
 	"developer": "YellowCat98",
 	"description": "Use a separate icon for your UFO and ship.",
 	"settings": {
@@ -17,7 +17,7 @@
 			"description": "The cube ID for the ship.",
 			"type": "int",
 			"default": 0,
-			"max": 484,
+			"max": 485,
 			"min": 0,
 			"control": {
 				"slider": false
@@ -28,7 +28,7 @@
 			"description": "The cube ID for the UFO.",
 			"type": "int",
 			"default": 0,
-			"max": 484,
+			"max": 485,
 			"min": 0,
 			"control": {
 				"slider": false
