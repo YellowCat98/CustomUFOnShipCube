@@ -8,8 +8,8 @@ bool isCube(PlayerObject* player) {
 }
 
 class $modify(GJBaseGameLayerHook, GJBaseGameLayer) {
-	void update(float dt) {
-		GJBaseGameLayer::update(dt);
+	void visit() {
+		GJBaseGameLayer::visit();
 		if (m_player1->m_isBird) {
 			m_player1->updatePlayerFrame(Mod::get()->getSettingValue<int64_t>("ufo-cube"));
 		} else if (m_player1->m_isShip) {
